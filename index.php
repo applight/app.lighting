@@ -14,9 +14,6 @@ function load_main( $page ) {
         case "integrations":
             return file_get_contents( "integrations.stub" );
             break;
-        case "code":
-            return file_get_contents( "code.stub" );
-            break;
         default:
             return file_get_contents( "index.stub" );
             break;
@@ -24,15 +21,6 @@ function load_main( $page ) {
     
 }
 ?>
-
-							<li><a href="index.html">Home</a></li>
-							<li><a href="appointments.html">Appointments</a></li>
-							<li><a href="softphone.html">Softphone</a></li>
-							<li><a href="integrations.html">Integrations</a></li>
-							<li><a href="https://github.com/applight">Code</a></li>
-
-
-
 <!DOCTYPE HTML>
 <!--
 	Forty by HTML5 UP
@@ -54,7 +42,7 @@ function load_main( $page ) {
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>App Lighting</strong> <span>we internet</span></a>
+						<a href="index.php" class="logo"><strong>App Lighting</strong> <span>we internet</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -63,10 +51,10 @@ function load_main( $page ) {
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="appointments.html">Appointments</a></li>
-							<li><a href="softphone.html">Softphone</a></li>
-							<li><a href="integrations.html">Integrations</a></li>
+                            <li><a href="index.php">Home</a></li>
+							<li><a href="index.php?page=appointments">Appointments</a></li>
+							<li><a href="index.php?page=softphone">Softphone</a></li>
+							<li><a href="index.php?page=integrations">Integrations</a></li>
 							<li><a href="https://github.com/applight">Code</a></li>
 						</ul>
 						<ul class="actions stacked">
