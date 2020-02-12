@@ -1,7 +1,7 @@
 <?php
 
 function load_main( $page ) {
-    switch $page {
+    switch ( $page ) {
         case "appointments":
             return file_get_contents( "appointments.stub" );
             break;
