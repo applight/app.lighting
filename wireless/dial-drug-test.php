@@ -20,7 +20,7 @@ $auth_token = '74cab7bd63f22fcdc5e07cb9761aaeb4cd';
 $from = "+19783879792";
 
 // Where to make a voice call (your cell phone?)
-$to = "+16173990190";
+$to = "+16173390190";
 
 $client = new Client($account_sid, $auth_token);
 $client->account->calls->create(  
@@ -29,10 +29,10 @@ $client->account->calls->create(
     array(
         "answerOnBridge" => "true",
         "sendDigits" => "ww1ww4615998",
-        "twiml" => $record
+        "twiml" => $response
     )
 );
 
-print( client.sid );
+echo client->sid;
 
 ?>
