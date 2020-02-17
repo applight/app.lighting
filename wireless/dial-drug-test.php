@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once '/var/www/vhosts/app.lighting/vendor/autoload.php';
 
 use Twilio\Rest\Client;
 use Twilio\TwiML;
@@ -18,12 +18,12 @@ $auth_token = '74cab7bd63f22fcdc5e07cb9761aaeb4cd';
 
 // A Twilio number you own with Voice capabilities
 $from = "+19783879792";
-
 // Where to make a voice call (your cell phone?)
-$to = "+16173390190";
+$to = "+16173345281";
 
 $client = new Client($account_sid, $auth_token);
-$client->account->calls->create(  
+
+$call = $client->calls->create(  
     $to,
     $from,
     array(
@@ -33,6 +33,6 @@ $client->account->calls->create(
     )
 );
 
-echo $client->sid;
+echo $call->sid;
 
 ?>
