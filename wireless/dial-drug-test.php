@@ -1,5 +1,5 @@
 <?php
-require_once '/var/www/vhosts/app.lighting/vendor/autoload.php';
+require_once '/var/www/vhosts/app.lighting/httpdocs/vendor/autoload.php';
 
 use Twilio\Rest\Client;
 use Twilio\TwiML;

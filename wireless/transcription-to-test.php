@@ -1,7 +1,7 @@
 <?php
 // Update the path below to your autoload.php,
 // see https://getcomposer.org/doc/01-basic-usage.md
-require_once '/var/www/vhosts/app.lighting/vendor/autoload.php';
+require_once '/var/www/vhosts/app.lighting/httpdocs/vendor/autoload.php';
 
 use Twilio\Rest\Client;
 
