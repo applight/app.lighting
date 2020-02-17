@@ -7,7 +7,7 @@ use Twilio\TwiML\VoiceResponse;
 // construct the recording
 $response = new VoiceResponse();
 $response->record(['timeout' => 100, 'transcribe' => 'true', 
-'transcribeCallback' => '/transcripion-to-test.php', 'maxLength' => 20 ]);
+'transcribeCallback' => 'https://app.lighting/wireless/transcripion-to-test.php', 'maxLength' => 20 ]);
 
 // Your Account SID and Auth Token from twilio.com/console
 $account_sid = 'AC5d01014322632b47006b8f6b9379cf4f';
