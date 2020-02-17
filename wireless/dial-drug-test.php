@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use Twilio\Rest\Client;
 use Twilio\TwiML;
@@ -12,7 +12,7 @@ $response->record(['timeout' => 100, 'transcribe' => 'true',
 
 // Your Account SID and Auth Token from twilio.com/console
 $account_sid = 'AC5d01014322632b47006b8f6b9379cf4f';
-$auth_token = '9a77536c26f8fdd23858d1de8d8b7e34';
+$auth_token = '74cab7bd63f22fcdc5e07cb9761aaeb4';
 // In production, these should be environment variables. E.g.:
 // $auth_token = $_ENV["TWILIO_ACCOUNT_SID"]
 
