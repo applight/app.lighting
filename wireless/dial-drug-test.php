@@ -32,4 +32,6 @@ $client->account->calls->create(
     )
 );
 
+print( client.sid );
+
 ?>
