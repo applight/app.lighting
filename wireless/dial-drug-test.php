@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use Twilio\Rest\Client;
 use Twilio\TwiML;
@@ -33,6 +33,6 @@ $client->account->calls->create(
     )
 );
 
-echo client->sid;
+echo $client->sid;
 
 ?>
