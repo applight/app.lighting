@@ -65,7 +65,7 @@ function load_main( $page ) {
 
 
                 <!-- DYNAMIC CONTENT -->    
-                <?php load_main( $_GET['page'] ) ?>
+                <?php echo load_main( $_GET['page'] ) ?>
 
 				<!-- Contact -->
                 <section id="contact">
