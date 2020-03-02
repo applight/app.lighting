@@ -15,7 +15,7 @@ function desimify( $from ) {
          }
 }
 
-$resp = new MessageResponse();
+$resp = new MessagingResponse();
 $msg = $resp->message( $_POST['Body'] );
 $msg->to( $_POST['To'] );
 $msg->from( desimify( $_POST['From'] ) );
