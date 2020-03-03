@@ -13,7 +13,7 @@ $from = $rawFrom  = trim( $_POST['From'] );
 
 // if it's me
 if ( strncmp($rawFrom, "mvaughan@applight.sip.us1.twilio.com", 36) == 0 ) {
-   $directions = explode(";", $rawTo);
+   $directions = explode("TO", $rawTo);
    if ( sizeof($directions) == 2 ) {
       $from = trim( $directions[0] );
       $to   = trim( $directions[1] );
