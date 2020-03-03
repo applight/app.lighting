@@ -11,6 +11,7 @@ $from   = $rawFrom   = trim( $_POST['From'] );
 $digits = $rawDigits = trim( $_POST['Digits'] );
 
 if ( $digits ) {
+// second pass, we have digits entered
    switch ( $digits) {
       case "0":
          // if it's me
@@ -32,10 +33,13 @@ if ( $digits ) {
    echo '<?xml version="1.0" encoding="UTF-8"?><Response><Dial answerOnBridge="true" callerId="{{#e164}}' + $from  + '{{/e164}}"><Number>{{#e164}}' + $to + '{{/e164}}</Number></Dial></Response>';
 
 } else {
-
+// First pass through -- gather has not had a response
    $response = new VoiceResponse();
-   $response->gather("enter dial from number, zero star for default, or nine star for random", [ 'action' => '/route'])
+   $gather = $response->gather([ 'input' => 'dtmf', 'numDigits' => 10, 'finishOnKey' => '*' ]);
+   $gather->say('enter the number to appear on caller eye dee, or press zero star for default, or nine star for a random number');
    
+   echo $response;
+      
 }
 
 ?>
