@@ -26,11 +26,11 @@ if ( $digits ) {
          $from = "+18882001601";
          break;
       default:
-         if ( strlen( $digits ) == 10 ) $from = "+1" + $digits;
+         if ( strlen( $digits ) == 10 ) $from = "+1" . $digits;
          break;
    }
    
-   echo '<?xml version="1.0" encoding="UTF-8"?><Response><Dial answerOnBridge="true" callerId="{{#e164}}' + $from  + '{{/e164}}"><Number>{{#e164}}' + $to + '{{/e164}}</Number></Dial></Response>';
+   echo '<?xml version="1.0" encoding="UTF-8"?><Response><Dial answerOnBridge="true" callerId="{{#e164}}' . $from  . '{{/e164}}"><Number>{{#e164}}' . $to . '{{/e164}}</Number></Dial></Response>';
 
 } else {
 // First pass through -- gather has not had a response
