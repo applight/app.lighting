@@ -1,6 +1,6 @@
 <?php
 require_once '/var/www/vhosts/app.lighting/httpdocs/vendor/autoload.php';
-require_once '/var/www/vhosts/app.lighting/httpdocs/vendor/libAppLighting.php';
+require_once 'libAppLighting.php';
 
 use Twilio\TwiML;
 use Twilio\TwiML\MessagingResponse;
