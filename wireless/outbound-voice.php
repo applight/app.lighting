@@ -30,7 +30,7 @@ if ( $digits ) {
          break;
    }
    
-   echo '<?xml version="1.0" encoding="UTF-8"?><Response><Dial answerOnBridge="true" callerId="{{#e164}}' . $from  . '{{/e164}}"><Number>{{#e164}}' . $to . '{{/e164}}</Number></Dial></Response>';
+   echo '<?xml version="1.0" encoding="UTF-8"?><Response><Dial answerOnBridge="true" callerId="' . $from  . '"><Number>' . $to . '</Number></Dial></Response>';
 
 } else {
 // First pass through -- gather has not had a response
