@@ -5,10 +5,10 @@
             <h1>Experiments with communication</h1>
         </header>
         <div class="content">
-            <p>App Lighting builds <br />
-            and released under the Creative Commons.</p>
+            <p>App Lighting builds custom Web and Mobile Applications for secure internal and external (B2B and B2C) employee and client engagement.
+            <br/>Try out some of our demos to see what we can do for you business!</p>
             <ul class="actions">
-                <li><a href="#one" class="button next scrolly">Get Started</a></li>
+                <li><a href="#one" class="button next scrolly">Demos</a></li>
             </ul>
         </div>
     </div>
@@ -24,8 +24,11 @@
                     <img src="images/pic01.jpg" alt="" />
                 </span>
                 <header class="major">
-                    <h3><a href="landing.html" class="link">Aliquam</a></h3>
-                    <p>Ipsum dolor sit amet</p>
+                    <h3><a href="landing.html" class="link">Proxied phone number autodialing</a></h3>
+                    <p>Have your sales team all dial out (mobile, office, SIP, or Web) from either one of our randomly generated 
+                    proxy numbers, or your companies own sales number. Call backs can be routing using whatever logic you choose. <br/>
+                    The most common choices are: route calls to person or people on call, route calls to the calling sales person, 
+                    route calls to an automated line (which we can also build for you), or custom logic based on the caller and their current relationship with your business.</p>
                 </header>
             </article>
             <article>
@@ -33,8 +36,9 @@
                     <img src="images/pic02.jpg" alt="" />
                 </span>
                 <header class="major">
-                    <h3><a href="landing.html" class="link">Tempus</a></h3>
-                    <p>feugiat amet tempus</p>
+                    <h3><a href="landing.html" class="link">Automated voice calls, text messages, and emails</a></h3>
+                    <p>Keep your customers engaged with appoitnment reminders, special deals, and opt-in communications.<br/>
+                    We currently offer support for voice calls, text messages, messenger, whatsapp, line, email, and will build custom integrations for interested parties.</p>
                 </header>
             </article>
             <article>
@@ -42,8 +46,8 @@
                     <img src="images/pic03.jpg" alt="" />
                 </span>
                 <header class="major">
-                    <h3><a href="landing.html" class="link">Magna</a></h3>
-                    <p>Lorem etiam nullam</p>
+                    <h3><a href="landing.html" class="link">Web, Android, iOS, and mobile interfaces for your teams or your clients</a></h3>
+                    <p>We can build your call center software, web portals for your teams in the field or on the go, as well as systems specifically for clients and customers.</p>
                 </header>
             </article>
             <article>
@@ -51,8 +55,10 @@
                     <img src="images/pic04.jpg" alt="" />
                 </span>
                 <header class="major">
-                    <h3><a href="landing.html" class="link">Ipsum</a></h3>
-                    <p>Nisl sed aliquam</p>
+                    <h3><a href="landing.html" class="link">Special voicemails, appoitment scheduling systems, IVR (automated systems for customers calling in)</a></h3>
+                    <p>Whether you are looking for a tradition "press 1 for sales, press 2 for support, or say the name of the part you wish to reach", 
+                    a more transparent system that routes calls on a per customer basis, a voicemail system that allows customer to book appointment (adding them to your emplyees calendar with or without confirmation) 
+                    and sending text message reminders to both the employee and customer some days or hours before the appointment, or if your are looking for an entirely custom system: we've got you!</p>
                 </header>
             </article>
             <article>
@@ -60,8 +66,14 @@
                     <img src="images/pic05.jpg" alt="" />
                 </span>
                 <header class="major">
-                    <h3><a href="landing.html" class="link">Consequat</a></h3>
-                    <p>Ipsum dolor sit amet</p>
+                    <h3><a href="landing.html" class="link">SIM Cards and call-in gateways</a></h3>
+                    <p>Want your employess to be able to access your companies special calling logic just by dailing the person they wish to reach or a special call-in gateway number? 
+                    We do too! We can provide SIM cards that work for almost any unlocked GSM or CDMA phone. We charge between $5-15 dollars a month for lines with unlimited calling and text messaging, and can provide post pay data at competitive prices.<br/>
+                    Our SIMS have been tested in North America, can retain your old phone numbers, can receive incoming calls to one or more numbers, make outbound calls 
+                    based originating from whatever numbers you wish (including your companies primary phone number, proxy numbers, the employees number of choice, or any numbers you own) on a per employee and per customer basic.<br/>
+                    Basically, however you choose! This integrates seemlessly with our other offerings, may cost you less than you are currently paying, and, when done right, save you and your employees time while improving the quality of customer interaction.<br/>
+                    Record keeping can be done automatically (no more ad-hoc notes from employees in the field) and special notes about the 'tone' or 'mood' of a call can be provided by one of three Natural Language Processing AI's provided by Google Cloud, Amazon Web Servies, or IBM's Watson (the computer that beat Ken Jenners at Jeopardy.)
+                    <br/>Addtionally, if you like your carrier, this can be accomlished through Android and iOS applications and is also true of our text message offering. </p>
                 </header>
             </article>
             <article>
@@ -69,8 +81,8 @@
                     <img src="images/pic06.jpg" alt="" />
                 </span>
                 <header class="major">
-                    <h3><a href="landing.html" class="link">Etiam</a></h3>
-                    <p>Feugiat amet tempus</p>
+                    <h3><a href="landing.html" class="link">Anything else you need!</a></h3>
+                    <p>We will roll out applications for Web, Android, and Mobile for interested parties after a case by case assesment. Including onsite time spent with your employees analysing their pain points and bottlenecks, allowing us to find easy to build integrations saving your business money and your employees time and frustration.</p>
                 </header>
             </article>
         </section>
@@ -79,9 +91,11 @@
         <section id="two">
             <div class="inner">
                 <header class="major">
-                    <h2>Massa libero</h2>
+                    <h2>Get in touch with us!</h2>
                 </header>
-                <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+                <p>we are a small shop of dedicated engineers who love what we do: making your business more productive, bettering customer interaction and satisfaction, and improving the business bottom line.<br/>
+                Contact us by email at more@app.lighting, or, if your email client doesn't yet support the 'lighting' top level domain, more@xmattv.com.<br/>
+                By phone at (888) 200 - 1601</p>
                 <ul class="actions">
                     <li><a href="landing.html" class="button next">Get Started</a></li>
                 </ul>
