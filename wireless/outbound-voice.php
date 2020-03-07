@@ -19,7 +19,7 @@ $digits = trim( $_POST['Digits'] );
 
 if ( $digits ) {
 // second pass, we have digits entered
-   switch ( remove_trailing_pound($digits) ) {
+   switch ( removeTrailingPound($digits) ) {
    case "0":
        // if it's me
        if ( strncmp($from, "mvaughan@applight.sip.us1.twilio.com", 36) == 0 ) {
@@ -40,10 +40,10 @@ if ( $digits ) {
    echo '<?xml version="1.0" encoding="UTF-8"?><Response><Dial answerOnBridge="true" callerId="' . $from  . '"><Number>' . $to . '</Number></Dial></Response>';
 
 } else {
-// First pass through -- gather has not had a response
+   // First pass through -- gather has not had a response
    $response = new VoiceResponse();
    $gather = $response->gather([ 'input' => 'dtmf', 'numDigits' => 10 ]);
-   $gather->say('enter the number to appear on caller eye dee, or press zero pound for default, or nine pound for a random number');
+   $gather->say('enter the number to appear on caller eye dee, or press zero pound for default, or nine pound for a proxy number');
    
    echo $response;
       
