@@ -45,8 +45,8 @@ if ( $digits ) {
    // First pass through -- gather has not had a response
    $response = new VoiceResponse();
 
-   $dial = $reponse->dial( ['callerId' => $callerId,
-                            'answerOnBridge' => 'true' ] );
+   $dial = $response->dial( ['callerId' => $callerId,
+                             'answerOnBridge' => 'true' ] );
    $dial->number( $to );
 
    echo $response;
