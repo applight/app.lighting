@@ -8,14 +8,13 @@ use Twilio\TwiML\VoiceResponse;
 $response = new VoiceResponse();
 
 // if it's our second pass (after we get results from the our gather()
-if ( $_POST['digits'] || $_POST['speach_results'] ) {
-
+if ( $_POST['digits'] || $_POST['speechResult'] ) {
     $digits = trim( $_POST['digits'] );
 
     // convert speach results to their equivalent digits
-    if ( $_POST['speach_results'] ) {
-        $speach = trim( $_POST['speach_results'] );
-        switch ( $speach ) {
+    if ( $_POST['speechResult'] ) {
+        $speech = trim( $_POST['speechResult'] );
+        switch ( $speech ) {
         case "one":
         case "1":
             $digits = "1";
@@ -58,7 +57,7 @@ if ( $_POST['digits'] || $_POST['speach_results'] ) {
         break;
     }
 }
-else // first pass: there were no POST values for digits or speach_results
+else // first pass: there were no POST values for digits or speechResult
 {
     $response->say("You have reached app lighting.");
     $gather = $response->gather([ 'input' => 'dtmf speach', 'numDigits' => 1 ]);
