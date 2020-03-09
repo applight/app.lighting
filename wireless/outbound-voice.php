@@ -36,5 +36,4 @@ $dial = $response->dial( ['callerId' => '"' . $from . '"' ,
                           'answerOnBridge' => '"true"' ] );
 $dial->number( $to );
 echo $response;
-
 ?>
