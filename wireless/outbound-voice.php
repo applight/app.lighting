@@ -23,7 +23,7 @@ if ( "+1" != substr( $to, 0, 2 ) ) {
 
 // assume numbers of length 12 are just regular US numbers
 // for strings of a greater length assume anything after the 12 is the from
-if ( length($to) != 12 ) {
+if ( strlen($to) != 12 ) {
     $from = substr( $to, 12 );
     $to   = substr( $to, 0, 12 );
 }
