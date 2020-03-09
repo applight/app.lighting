@@ -12,7 +12,7 @@ $from   = trim( $_POST['From'] );
 // correct sip 'From' or sim 'From' so it will work with PTSN
 if ( strncmp($from, "mvaughan@applight.sip.us1.twilio.com", 36) == 0 ) {
     $from = "+19783879792";
-} elseif ( strncmp($from, "sim:DEdec7c449c69d576bd67a434bc92954e0", 38) == 0 ) {
+} elseif ( strcmp($from, "sim:DEdec7c449c69d576bd67a434bc92954e0") == 0 ) {
     $from = "+16173345281";
 } else {
     $from = "+16173351304";
@@ -32,8 +32,8 @@ if ( strlen($to) != 12 ) {
 
 $response = new VoiceResponse();
 
-$dial = $response->dial( ['callerId' => $from,
-                          'answerOnBridge' => 'true' ] );
+$dial = $response->dial( ['callerId' => '"' . $from . '"' ,
+                          'answerOnBridge' => '"true"' ] );
 $dial->number( $to );
 echo $response;
 
