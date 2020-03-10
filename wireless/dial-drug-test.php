@@ -19,7 +19,7 @@ $auth_token = '74cab7bd63f22fcdc5e07cb9761aaeb4cd';
 // A Twilio number you own with Voice capabilities
 $from = "+19783879792";
 // Where to make a voice call (your cell phone?)
-$to = "+16173345281";
+$to = "+16173990190"; 
 
 $client = new Client($account_sid, $auth_token);
 
@@ -28,7 +28,7 @@ $call = $client->calls->create(
     $from,
     array(
         "answerOnBridge" => "true",
-        "sendDigits" => "ww1ww4615998",
+        "sendDigits" => "ww1w4615998#w1",
         "twiml" => $record
     )
 );
