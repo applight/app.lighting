@@ -7,9 +7,11 @@ use Twilio\Rest\Client;
 
 // Find your Account Sid and Auth Token at twilio.com/console
 // DANGER! This is insecure. See http://twil.io/secure
-$account_sid = 'AC5d01014322632b47006b8f6b9379cf4f';
-$auth_token = '74cab7bd63f22fcdc5e07cb9761aaeb4';
-$client = new Client($sid, $token);
+// Your Account SID and Auth Token from twilio.com/console
+$account_sid = $_ENV["TWILIO_ACCOUNT_SID"];
+$auth_token = $_ENV["TWILIO_AUTH_TOKEN"];
+
+$client = new Client($account_sid, $auth_token);
 
 #$transcription = $twilio->transcriptions("TRXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")->fetch();
 
