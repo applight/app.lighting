@@ -11,10 +11,8 @@ $record = $response->record(['timeout' => 100, 'transcribe' => 'true',
 'transcribeCallback' => 'https://app.lighting/wireless/transcripion-to-test.php', 'maxLength' => 20 ]);
 
 // Your Account SID and Auth Token from twilio.com/console
-$account_sid = 'AC5d01014322632b47006b8f6b9379cf4f';
-$auth_token = '74cab7bd63f22fcdc5e07cb9761aaeb4cd';
-// In production, these should be environment variables. E.g.:
-// $auth_token = $_ENV["TWILIO_ACCOUNT_SID"]
+$account_sid = $_ENV["TWILIO_ACCOUNT_SID"];
+$auth_token = $_ENV["TWILIO_AUTH_TOKEN"];
 
 // A Twilio number you own with Voice capabilities
 $from = "+19783879792";
