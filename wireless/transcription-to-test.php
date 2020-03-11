@@ -15,12 +15,12 @@ $client = new Client($sid, $token);
 
 $message = $client->messages->create(
     "+16173345281",
-    array("from" => "+19783879792", "body" => $_POST['transcriptionText'])
+    array('from' => '+19783879792', 'body' => $_POST['transcriptionText'])
 );
 
 $message2 = $client->messages->create(
     "+18574455517",
-    array("from" => "+19783879792", "body" => $_POST['transcriptionText'])
+    array('from' => '+19783879792', 'body' => $_POST['transcriptionText'])
 );
 
 echo $message->sid ;
