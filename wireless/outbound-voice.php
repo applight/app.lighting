@@ -32,8 +32,8 @@ if ( strlen($to) != 12 ) {
 
 $response = new VoiceResponse();
 
-$dial = $response->dial('', ['callerId' => '"' . $from . '"' ,
-                          'answerOnBridge' => '"true"' ] );
+$dial = $response->dial('', ['callerId' => $from,
+                          'answerOnBridge' => true ] );
 $dial->number( $to );
 echo $response;
 ?>
