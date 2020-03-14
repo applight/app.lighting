@@ -28,7 +28,7 @@ $call = $client->calls->create(
     array(
         'answerOnBridge' => 'true',
         'sendDigits' => 'ww1w4615998#w1',
-        'twiml' => $record
+        'twiml' => $response
     )
 );
 
