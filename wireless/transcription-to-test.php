@@ -8,8 +8,8 @@ use Twilio\Rest\Client;
 // Find your Account Sid and Auth Token at twilio.com/console
 // DANGER! This is insecure. See http://twil.io/secure
 // Your Account SID and Auth Token from twilio.com/console
-$account_sid = apache_getenv("TWILIO_ACCOUNT_SID");
-$auth_token = apache_getenv("TWILIO_AUTH_TOKEN");
+$account_sid = getenv("TWILIO_ACCOUNT_SID");
+$auth_token = getenv("TWILIO_AUTH_TOKEN");
 
 $client = new Client($account_sid, $auth_token);
 
