@@ -20,12 +20,5 @@ $message = $client->messages->create(
     array('from' => '+19783879792', 'body' => $_POST['transcriptionText'])
 );
 
-$message2 = $client->messages->create(
-    "+18574455517",
-    array('from' => '+19783879792', 'body' => $_POST['transcriptionText'])
-);
-
-echo $message->sid ;
-echo $message2->sid ;
-
+echo "Message sid: " . $message->sid ;
 ?>
