@@ -1,4 +1,4 @@
-<?
+<?php
 require_once '/var/www/vhosts/app.lighting/httpdocs/vendor/autoload.php';
 
 use Twilio\Rest\Client;
