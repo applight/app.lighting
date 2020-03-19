@@ -51,6 +51,6 @@ $call_listener = $client->calls->create(
     )
 );
 
-echo $call_target->sid . ' and aslo ' . $call_listener->sid;
+echo $response;
 
 ?>
