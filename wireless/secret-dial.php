@@ -10,7 +10,7 @@ $to   = trim($_POST['To']);
 $from = trim($_POST['From']);
 
 // correct sip 'From' or sim 'From' so it will work with PTSN
-if ( strncmp($from, "mvaughan@applight.sip.us1.twilio.com", 36) == 0 ) {
+if ( strncmp($from, "sip:mvaughan@applight.sip.us1.twilio.com", 40) == 0 ) {
     $from = "+19783879792";
 } elseif ( strcmp($from, "sim:DEdec7c449c69d576bd67a434bc92954e0") == 0 ) {
     $from = "+16173345281";
@@ -19,7 +19,7 @@ if ( strncmp($from, "mvaughan@applight.sip.us1.twilio.com", 36) == 0 ) {
 }
 
 // add the "+1" to numbers without it
-if ( "+1" != substr( $to, 0, 2 ) ) {
+if ( "+1" != substr( $to, 0, 2 ) && "sip:" != substr( $to, 0, 4 ) {
     $to = "+1" . $to;
 }
 
