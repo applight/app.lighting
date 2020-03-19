@@ -19,7 +19,7 @@ if ( strncmp($from, "sip:mvaughan@applight.sip.us1.twilio.com", 40) == 0 ) {
 }
 
 // add the "+1" to numbers without it
-if ( "+1" != substr( $to, 0, 2 ) && "sip:" != substr( $to, 0, 4 ) {
+if ( "+1" != substr( $to, 0, 2 ) && "sip:" != substr( $to, 0, 4 ) ) {
     $to = "+1" . $to;
 }
 
