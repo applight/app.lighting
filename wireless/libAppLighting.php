@@ -32,9 +32,10 @@ function e164( $number ) {
 	$number = desimify( $number );
 	$number = desipify( $number );
 	// add the "+1" to numbers without it
-	if ( "+1" != substr( $number, 0, 2 ) && "sip:" != substr( $number, 0, 4 ) ) {
-    	$to = "+1" . $to;
+	if ( "+1" != substr($number, 0, 2) ) {
+		$number = "+1" . $number;
 	}
+	return $number;
 }
 
 ?>
