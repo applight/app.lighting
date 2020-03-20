@@ -19,11 +19,11 @@ $dial->conference( 'eaves' ,
 
 $calleeResponse = new VoiceResponse();
 $dial = $calleeResponse->dial('');
-$dial->conference( 'eaves' , [ conference'muted' => 'false'] );
+$dial->conference( 'eaves' , [ 'muted' => 'false'] );
 
 $listenerResponse = new VoiceResponse();
 $dial = $listenerResponse->dial('');
-$dial->conference( 'eaves' , [ conference'muted' => 'true'] );
+$dial->conference( 'eaves' , [ 'muted' => 'true'] );
 
 // Your Account SID and Auth Token from twilio.com/console
 $account_sid = getenv("TWILIO_ACCOUNT_SID");
