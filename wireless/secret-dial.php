@@ -23,9 +23,20 @@ if ( "+1" != substr( $to, 0, 2 ) && "sip:" != substr( $to, 0, 4 ) ) {
     $to = "+1" . $to;
 }
 
-$response = new VoiceResponse();
-$dial = $response->dial('');
-$dial->conference( 'eaves' );
+$callerResponse = new VoiceResponse();
+$dial = $callerResponse->dial('');
+$dial->conference( 'eaves' , 
+                  [ 'startConferenceOnEnter' => 'true', 
+                   'endConferenceOnExit' => 'true', 
+                   'muted' => 'false'] );
+
+$calleeResponse = new VoiceResponse();
+$dial = $calleeResponse->dial('');
+$dial->conference( 'eaves' , [ conference'muted' => 'false'] );
+
+$listenerResponse = new VoiceResponse();
+$dial = $listenerResponse->dial('');
+$dial->conference( 'eaves' , [ conference'muted' => 'true'] );
 
 // Your Account SID and Auth Token from twilio.com/console
 $account_sid = getenv("TWILIO_ACCOUNT_SID");
@@ -38,7 +49,7 @@ $call_target = $client->calls->create(
     $from,
     array(
         'answerOnBridge' => 'true',
-        'twiml' => $response
+        'twiml' => $calleeResponse
     )
 );
 
@@ -47,10 +58,10 @@ $call_listener = $client->calls->create(
     '+18882001601',
     array(
         'answerOnBridge' => 'true',
-        'twiml' => $response
+        'twiml' => $listenerResponse
     )
 );
 
-echo $response;
+echo $callerResponse;
 
 ?>
