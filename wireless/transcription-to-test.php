@@ -20,5 +20,6 @@ $message = $client->messages->create(
     array('from' => '+19783879792', 'body' => $_POST['transcriptionText'])
 );
 
-echo "Message sid: " . $message->sid ;
+http_response_code( 200 );
+echo "{ 'sid' : '$message->sid' }";
 ?>
