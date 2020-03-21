@@ -8,11 +8,12 @@ use Twilio\TwiML\VoiceResponse;
 $response = new VoiceResponse();
 
 // if it's our second pass (after we get results from the our gather()
-if ( $_POST['digits'] || $_POST['speechResult'] ) {
-    $digits = trim( $_POST['digits'] );
-
-    // convert speach results to their equivalent digits
-    if ( $_POST['speechResult'] ) {
+if ( isset($_POST['digits']) || isset($_POST['speechResult']) ) {
+    $digits = "";
+    
+    if ( isset($_POST['digits']) ) {
+        $digits = trim($_POST['digits']);
+    } else if ( isset($_POST['speechResult']) ) {
         $speech = trim( $_POST['speechResult'] );
         switch ( $speech ) {
         case "one":
@@ -30,8 +31,7 @@ if ( $_POST['digits'] || $_POST['speechResult'] ) {
         }
     }
     
-    switch ( $digits ) {
-
+    switch ( trim($digits) ) {
     case "1":
         $response->say('Implementation incomplete');
         break;
