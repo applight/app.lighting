@@ -21,5 +21,5 @@ $message = $client->messages->create(
 );
 
 http_response_code( 200 );
-echo "{ 'sid' : '$message->sid' }";
+echo "{ 'sid' : '" . $message->sid . "' };";
 ?>
