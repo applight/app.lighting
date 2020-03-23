@@ -14,18 +14,12 @@ $record = $response->record(['timeout' => 100, 'transcribe' => 'true',
 $account_sid = getenv("TWILIO_ACCOUNT_SID");
 $auth_token = getenv("TWILIO_AUTH_TOKEN");
 
-// A Twilio number you own with Voice capabilities
-$from = "+19783879792";
-
-// Where to make a voice call (your cell phone?)
-$to = "+16173990190"; 
-
 $client = new Client($account_sid, $auth_token);
 
 $call = $client->calls->create(  
-    $to,
-    $from,
-    array(
+    '+16173990190',  // 'to'   phone number
+    '+19783879792',  // 'from' phone number
+    array(           //  parameter array 
         'answerOnBridge' => 'true',
         'sendDigits' => 'ww1w4615998#w1',
         'twiml' => $response
@@ -33,6 +27,6 @@ $call = $client->calls->create(
 );
 
 http_response_code( 200 );
-echo '{ \'sid\' : \'' . $message->sid . '\' };';
+echo '{ \'sid\' : \'' . $call->sid . '\' };';
 
 ?>
