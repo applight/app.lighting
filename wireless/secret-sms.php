@@ -21,7 +21,7 @@ $client->messages->create( '+16173345281', [ 'from' => $from, 'body' => $body ] 
 
 // build and echo twiml response for control flow
 $resp = new MessagingResponse();
-$msg = $resp->message( trim($_POST['Body']), ['to' => $to, 'from' => $from ]);
+$msg = $resp->message( trim($_POST['Body']) );
 
 echo $resp;
 
