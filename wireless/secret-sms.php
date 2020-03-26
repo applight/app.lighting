@@ -17,7 +17,7 @@ $client = new Client($account_sid, $auth_token);
 
 //use twilio rest api to send an sms
 $body = "to: " . $to . PHP_EOL . trim($_POST['Body']) ;
-$client->messages->create( '+16173345281', [ 'from' => $from, 'body' => $body ] );
+$client->messages->create( '+16173345281', [ 'body' => $body ] );
 
 // build and echo twiml response for control flow
 $resp = new MessagingResponse();
