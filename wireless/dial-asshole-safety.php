@@ -8,9 +8,8 @@ use Twilio\TwiML;
 use Twilio\TwiML\VoiceResponse;
 
 // Your Account SID and Auth Token from twilio.com/console
-$account_sid = getenv("TWILIO_ACCOUNT_SID");
-$auth_token  = getenv("TWILIO_AUTH_TOKEN");
-$client = new Client($account_sid, $auth_token);
+
+$client = new Client('AC5d01014322632b47006b8f6b9379cf4f', '3b981b6b08b551f2749afdc647af9d7f');
 
 $call_target = $client->calls->create(  
     "+17818081276",
