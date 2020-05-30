@@ -1,6 +1,6 @@
 <?php
 function load_main( $page ) {
-    switch ( striptags(trim($page)) ) {
+    switch ( strip_tags(trim($page)) ) {
         case "appointments":
             return file_get_contents( "appointments.stub" );
             break;
