@@ -5,12 +5,48 @@
             <h1>Experiments with communication</h1>
         </header>
         <div class="content">
+            <!-- FLICKITY CAROUSEL -->
+            <div class="carousel">
+
+                <!-- TEXT MESSAGES -->
+                <div class="carousel-cell">
+                    <div id="smsRecords">
+                    <iframe src="/chrome/sms-records.php"></iframe>
+                    </div>
+                </div>
+
+                <!-- VOICE CALLS -->
+                <div class="carousel-cell">
+                    <div id="callRecords">
+                    <iframe src="/chrome/call-records.php"></iframe>
+                    </div>
+                </div>
+
+                <!-- FORM TO SEND SMS -->
+                <div class="carousel-cell">
+                    <div id="sendSms">
+                    <form action="/wireless/send-sms-chrome" method="POST">
+                        <label for="smsFrom">From:</label><input id="smsFrom" name="smsFrom" type="text" value="+18574455517"/><br/>
+                        <label for="smsTo">To:</label><input id="smsTo" name="smsTo" type="text" value="+12025551212" /><br/>
+                        <label for="smsBody">Body:</label><input id="smsBody" name="smsBody" type="text" value="" /><br/>
+                        <input id="smsSend" name="smsSend" type="submit" value="Send SMS" />
+                    </form>
+                    </div>
+                </div>
+
+            </div>
+            <!-- END MAIN-CAROUSEL -->
+
+        </div>
+        <!--
+        <div class="content">
             <p>App Lighting builds custom Web and Mobile Applications for secure internal and external (B2B and B2C) employee and client engagement.
             <br/>Try out some of our demos to see what we can do for you business!</p>
             <ul class="actions">
                 <li><a href="#one" class="button next scrolly">Demos</a></li>
             </ul>
         </div>
+        -->
     </div>
 </section>
 
@@ -18,7 +54,6 @@
 <div id="main">
 
     <!-- One -->
-        <section id="one" class="tiles">
             <article>
                 <span class="image">
                     <img src="images/pic01.jpg" alt="" />

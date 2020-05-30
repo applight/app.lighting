@@ -1,7 +1,6 @@
 <?php
-
 function load_main( $page ) {
-    switch ( $page ) {
+    switch ( striptages(trim($page)) ) {
         case "appointments":
             return file_get_contents( "appointments.stub" );
             break;
@@ -17,8 +16,7 @@ function load_main( $page ) {
         default:
             return file_get_contents( "index.stub" );
             break;
-    }
-    
+        }
 }
 ?>
 <!DOCTYPE HTML>
@@ -33,6 +31,7 @@ function load_main( $page ) {
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/flickity.min.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -64,8 +63,10 @@ function load_main( $page ) {
 					</nav>
 
 
-                <!-- DYNAMIC CONTENT -->    
-                <?php echo load_main( $_GET['page'] ) ?>
+                <!-- DYNAMIC CONTENT -->
+                <?php
+                    echo load_main( $_GET['page'] );
+                ?>
 
 				<!-- Contact -->
                 <section id="contact">
@@ -144,8 +145,8 @@ function load_main( $page ) {
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/flickity.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
