@@ -34,7 +34,7 @@ function load_main( $page ) {
         <link rel="stylesheet" href="assets/css/flickity.min.css">
         <link rel="stylesheet" href="assets/css/flickity.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <script src="assets/js/flickity.min.js"></script>
+        <script src="assets/js/flickity.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -144,6 +144,7 @@ function load_main( $page ) {
 		<!-- Scripts -->
 		    <script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/flickity.pkgd.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
