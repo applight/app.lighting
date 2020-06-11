@@ -22,7 +22,7 @@ $call_target = $client->calls->create(
     array(
         'answerOnBridge' => 'true',
 	'record' => 'true',
-        'twiml' => '<Response><Dial callerId="'+ $from +'"><Number>' + $to + '</Number></Dial></Response>'
+        'twiml' => '<Response><Dial callerId="'+ $from +'"><Number>' + $to + '</Number></Dial><Say>Hello Luitenent. There is a domestic disturbance at 82 garfield ave on the first floor. I am a concerned neighbor who could hear the screams over their music as a passed outside. This is the only way I feel safe. It was the voice of a woman or a child perhaps. Hello Luitenent. There is a domestic disturbance at 82 garfield ave on the first floor. I am a concerned neighbor who could hear the screams over their music as a passed outside. This is the only way I feel safe. It was the voice of a woman or a child perhaps. </Say></Response>'
     )
 );
 
