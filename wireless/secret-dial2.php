@@ -8,7 +8,6 @@ use Twilio\TwiML\VoiceResponse;
 
 // construct the recording
 $to   = e164($_POST['To']);
-$from = e164($_POST['From']);
 
 // Your Account SID and Auth Token from twilio.com/console
 $account_sid = getenv("TWILIO_ACCOUNT_SID");
@@ -17,12 +16,12 @@ $client = new Client($account_sid, $auth_token);
 
 // create outbound calls that dial into the conference
 $call_target = $client->calls->create(  
-    "+17818081276"
-    $from,
+    $to,
     array(
+	'callerId' => '+16173351304',
         'answerOnBridge' => 'true',
 	'record' => 'true',
-        'twiml' => '<Response><Dial callerId="'+ $from +'"><Number>' + $to + '</Number></Dial><Say>Hello Luitenent. There is a domestic disturbance at 82 garfield ave on the first floor. I am a concerned neighbor who could hear the screams over their music as a passed outside. This is the only way I feel safe. It was the voice of a woman or a child perhaps. Hello Luitenent. There is a domestic disturbance at 82 garfield ave on the first floor. I am a concerned neighbor who could hear the screams over their music as a passed outside. This is the only way I feel safe. It was the voice of a woman or a child perhaps. </Say></Response>'
+        'twiml' => '<Response><Say>Hello Luitenent. There is a domestic disturbance at 82 garfield ave on the first floor. I am a concerned neighbor who could hear the screams over their music as a passed outside. This is the only way I feel safe. It was the voice of a woman or a child perhaps. Hello Luitenent. There is a domestic disturbance at 82 garfield ave on the first floor. I am a concerned neighbor who could hear the screams over their music as a passed outside. This is the only way I feel safe. It was the voice of a woman or a child perhaps. </Say></Response>'
     )
 );
 
