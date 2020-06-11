@@ -1,13 +1,19 @@
 <?php
 require_once '/var/www/vhosts/app.lighting/httpdocs/vendor/autoload.php';
-require_once 'libAppLighting.php';
 
 use Twilio\Rest\Client;
 use Twilio\TwiML;
 use Twilio\TwiML\VoiceResponse;
 
 // construct the recording
-$to   = e164($_POST['To']);
+$to   = strip_tags(trim(($_REQUEST['To'])));
+
+if ( !ctype_alnum($to) ) {
+   echo "DANGER WILL ROBINSON!!!";
+   exit;
+   exit();
+   return;
+}
 
 // Your Account SID and Auth Token from twilio.com/console
 $account_sid = getenv("TWILIO_ACCOUNT_SID");
